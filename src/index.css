@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import "tailwindcss";
+@theme {
+  --color-brand: #f58020;
+  --color-brand-hover: #fb9440;
+  --color-accent: #034ea2;
+  --color-text-primary: #4a4a4a;
+  --color-text-secondary: #333333;
+  --color-button: #f26b38;
+  --color-button-hover: #fb9440cc;
+}
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-size: 14px;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 400;
+  }
+}
+.container-main {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+}

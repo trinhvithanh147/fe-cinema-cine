@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -16,6 +16,7 @@ import slide7 from "../../assets/images/shopee-1_1778143451364.jpg";
 import slide8 from "../../assets/images/banner-2048-x-682_1778665576842.jpg";
 import slide9 from "../../assets/images/zalopay-galaxy-2_1775802092751.jpg";
 import slide10 from "../../assets/images/momo-2_1778484333050.jpg";
+import SearchMovie from "../SearchMovie/SearchMovie";
 const slides = [
   slide1,
   slide2,
@@ -31,14 +32,19 @@ const slides = [
 
 const BannerSlide = () => {
   return (
-    <section className="banner pt-[25px] pb-[50px]">
+    <section className="banner pt-[25px]  relative">
       <Swiper
-        modules={[Navigation, Pagination]}
+        modules={[Navigation, Pagination, Autoplay]}
         loop
         centeredSlides
         slidesPerView="auto"
         navigation
         pagination={{ clickable: true }}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        speed={1500}
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index} className="max-w-[1456px] px-6">
@@ -46,6 +52,7 @@ const BannerSlide = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+      <SearchMovie />
     </section>
   );
 };

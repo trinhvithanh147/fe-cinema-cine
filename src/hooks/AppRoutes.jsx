@@ -12,6 +12,7 @@ const AppRoutes = () => {
       <Route element={<HomeTemplate />}>
         <Route path={path.homePage} element={<HomePage />} />
       </Route>
+      <Route path={path.login} element={<Login />} />
     </Routes>
   );
 };

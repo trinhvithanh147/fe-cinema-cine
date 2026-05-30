@@ -5,6 +5,7 @@ import HomeTemplate from "../templates/HomeTemplate/HomeTemplate";
 import Login from "../templates/AuthTemplate/Login";
 import HomePage from "../pages/HomePage";
 import BannerSlide from "../pages/BannerSlide/BannerSlide";
+import SignUp from "../templates/AuthTemplate/SignUp";
 
 const AppRoutes = () => {
   return (
@@ -13,6 +14,7 @@ const AppRoutes = () => {
         <Route path={path.homePage} element={<HomePage />} />
       </Route>
       <Route path={path.login} element={<Login />} />
+      <Route path={path.signUp} element={<SignUp />} />
     </Routes>
   );
 };

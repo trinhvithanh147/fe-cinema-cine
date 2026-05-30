@@ -6,6 +6,7 @@ const InputCustome = ({
   className,
   type = "text",
   placeholder,
+  ...props
 }) => {
   return (
     <input
@@ -14,6 +15,7 @@ const InputCustome = ({
       className={className}
       onChange={onChange}
       value={value}
+      {...props}
     />
   );
 };

@@ -6,6 +6,7 @@ import Login from "../templates/AuthTemplate/Login";
 import HomePage from "../pages/HomePage";
 import BannerSlide from "../pages/BannerSlide/BannerSlide";
 import SignUp from "../templates/AuthTemplate/SignUp";
+import LoadingScreen from "../components/LoadingScreen/LoadingScreen";
 
 const AppRoutes = () => {
   return (
